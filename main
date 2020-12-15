@@ -1,0 +1,24 @@
+letters = {}
+chr_list = []
+x = 0
+letters_list = []
+numb_list = []
+total = 0
+
+for i in range(65, 91):
+    x += 1
+    letter = chr(i)
+    chr_list.append(chr(i))
+    letters[letter] = x
+
+k = input("Please input only a single word in uppercase:")
+for i in k:
+    letters_list.append(i)
+
+for i in letters_list:
+    numb_list.append(letters[i])
+
+for i in numb_list:
+    total = i + total
+
+print("Your word sum is:", total)
